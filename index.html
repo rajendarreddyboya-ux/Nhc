@@ -1,167 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NHC – Premium DTCP Project Near Shankarpally</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nature Home Constructions (NHC) – Build the Trust</title>
+  <meta name="description" content="Nature Home Constructions (NHC) – DTCP/HMDA/RERA approved plots & farmlands with trust, loyalty and hassle-free registrations. Contact +91 8886047520." />
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #222;
-}
+  <style>
+    :root{
+      --green:#0aa36a;
+      --dark:#0f1a16;
+      --ink:#101820;
+      --muted:#5b6b65;
+      --bg:#f6fbf9;
+      --card:#ffffff;
+      --accent:#0aa36a;
+      --shadow: 0 10px 30px rgba(0,0,0,.12);
+      --radius: 16px;
+    }
 
-/* Header */
-header {
-    background: black;
-    color: gold;
-    padding: 20px;
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-}
+    *{box-sizing:border-box}
+    body{margin:0;font-family: Arial, Helvetica, sans-serif;background:var(--bg);color:var(--ink); line-height:1.6;}
 
-/* Hero Section */
-.hero {
-    background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format');
-    background-size: cover;
-    background-position: center;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: 2px 2px 6px black;
-}
+    /* Top bar + header */
+    .topbar{background:var(--dark); color:#fff; padding:8px 12px; font-size:13px;}
+    .topbar .wrap{max-width:1120px; margin:0 auto; display:flex; gap:12px; justify-content:space-between; align-items:center; flex-wrap:wrap;}
+    .pill{display:inline-flex; gap:6px; align-items:center; padding:4px 10px; border-radius:999px; background:rgba(255,255,255,.12);}
 
-/* Highlights Section */
-.section {
-    padding: 30px 20px;
-    text-align: center;
-}
+    header{position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background: rgba(246,251,249,.9); border-bottom:1px solid rgba(0,0,0,.08);}
+    .nav{max-width:1120px; margin:0 auto; padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:12px;}
+    .brand{display:flex; gap:10px; align-items:center;}
+    .brand img{height:46px; width:auto; display:block;}
+    .brand h1{margin:0; font-size:18px; letter-spacing:.2px;}
+    .brand p{margin:0; font-size:12px; color:var(--muted);}
 
-.section h2 {
-    color: #111;
-    font-size: 26px;
-    margin-bottom: 15px;
-}
+    .navlinks{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;}
+    .link{padding:8px 10px; border-radius:999px; text-decoration:none; font-size:13px; color:var(--ink); border:1px solid rgba(0,0,0,.12); background:#fff;}
+    .link:hover{border-color:rgba(0,0,0,.22);}
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-    padding: 0 10px;
-}
+    /* Hero */
+    .hero{max-width:1120px; margin:0 auto; padding:18px 12px 10px; display:grid; grid-template-columns: 1.2fr .8fr; gap:14px;}
+    @media (max-width: 860px){ .hero{grid-template-columns:1fr;} .navlinks{display:none;} }
 
-.card {
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 20px;
-    background: #fafafa;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-    font-weight: bold;
-}
+    .heroCard{border-radius: var(--radius); background: linear-gradient(135deg, #ffffff 0%, #eefdf6 100%); box-shadow:var(--shadow); overflow:hidden;}
+    .heroTop{padding:18px 18px 6px;}
+    .tagline{display:inline-block; font-size:13px; letter-spacing:.3px; color:#fff; background:var(--dark); border-radius:999px; padding:5px 10px;}
+    .title{margin:10px 0 6px; font-size:24px; letter-spacing:.3px;}
+    .subtitle{margin:0; color:var(--muted); font-size:14px;}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; padding:12px 18px 18px;}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; font-weight:700; border-radius:999px; padding:10px 14px; border:1px solid rgba(0,0,0,.12);}
+    .btnPrimary{background:var(--dark); color:#fff;}
+    .btnGhost{background:#fff; color:var(--ink);}
 
-/* CTA Buttons */
-.btn {
-    background: black;
-    color: gold;
-    padding: 14px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    display: inline-block;
-    margin-top: 20px;
-}
+    .sideCard{border-radius: var(--radius); background:#fff; box-shadow:var(--shadow); padding:14px;}
+    .mini{margin:0; font-size:13px; color:var(--muted);}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--ink);}
 
-/* Gallery */
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
+    /* Sections */
+    .section{max-width:1120px; margin:0 auto; padding:18px 12px;}
+    .section h2{margin:0 0 10px; font-size:20px;}
+    .grid{display:grid; gap:12px; grid-template-columns: repeat(3, 1fr);}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr;} }
 
-/* Contact Section */
-.contact-box {
-    background: black;
-    color: gold;
-    padding: 25px;
-    border-radius: 10px;
-    width: 90%;
-    margin: 10px auto;
-}
+    .card{background:var(--card); border-radius: var(--radius); box-shadow:var(--shadow); padding:14px;}
+    .card h3{margin:0 0 6px; font-size:16px;}
+    .card p{margin:0; color:var(--muted); font-size:14px;}
 
-/* WhatsApp Floating */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    font-size: 20px;
-    padding: 14px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
-}
-</style>
+    /* Gallery */
+    .gallery{display:grid; gap:10px; grid-template-columns:repeat(3, 1fr);}
+    @media (max-width: 860px){ .gallery{grid-template-columns:1fr;} }
+    .gallery img{width:100%; border-radius:12px; display:block; object-fit:cover; aspect-ratio: 4/3; background:#ddd;}
+
+    /* Footer */
+    footer{margin-top:18px; background:var(--dark); color:#fff;}
+    .footerWrap{max-width:1120px; margin:0 auto; padding:18px 12px; display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; align-items:flex-start;}
+    .small{font-size:13px; color:rgba(255,255,255,.86);}
+  </style>
 </head>
 
 <body>
-
-<header>
-    NHC – Premium DTCP Project Near Shankarpally
-</header>
-
-<div class="hero">
-    Premium DTCP Project • New HMDA Zone • 42 Lakhs Onwards
-</div>
-
-<!-- Highlights -->
-<div class="section">
-    <h2>Why Invest Here?</h2>
-    <div class="cards">
-        <div class="card">DTCP Approved</div>
-        <div class="card">New HMDA Zone</div>
-        <div class="card">Shankarpally – Prime Growth Belt</div>
-        <div class="card">Premium Surroundings</div>
-        <div class="card">Immediate Appreciation Zone</div>
-        <div class="card">Best for NRI Investors</div>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="pill">DTCP / HMDA / RERA Approved Projects</div>
+      <div class="pill">Trust · Loyalty · Hassle-free Registration</div>
+      <div class="pill">WhatsApp: +91 8886047520</div>
     </div>
+  </div>
 
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Book Site Visit</a>
-</div>
-
-<!-- Gallery -->
-<div class="section">
-    <h2>Project Gallery</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format">
-        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format">
-        <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format">
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <!-- Replace logo.png with your uploaded logo filename -->
+        <img src="logo.png" alt="NHC Logo" />
+        <div>
+          <h1>Nature Home Constructions (NHC)</h1>
+          <p>Build the Trust — Premium plots & compliant developments</p>
+        </div>
+      </div>
+      <nav class="navlinks" aria-label="Quick links">
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#compliance">Compliance</a>
+        <a class="link" href="#project">Project</a>
+        <a class="link" href="#contact">Contact</a>
+      </nav>
     </div>
-</div>
+  </header>
 
-<!-- Contact -->
-<div class="section">
-    <h2>Contact Developer</h2>
-    <div class="contact-box">
-        <h3>Rajendar Reddy</h3>
-        <p>7 Years Real Estate Experience</p>
-        <p>Corporate Style Work • Premium Client Handling</p>
-        <p><b>Phone:</b> +91 XXXXX XXXXX</p>
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="heroCard">
+        <div class="heroTop">
+          <span class="tagline">Corporate-Grade Real Estate · High Trust</span>
+          <h2 class="title">Best plots for long & short term returns — with guaranteed transparency</h2>
+          <p class="subtitle">
+            NHC only delivers <b>DTCP / HMDA / RERA approved</b> projects with clear documentation, fast execution and a smooth buyer experience.
+          </p>
+        </div>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="https://wa.me/918886047520" target="_blank" rel="noopener">WhatsApp Now</a>
+          <a class="btn btnGhost" href="#project">See NHC’s SANTO</a>
+        </div>
+      </div>
+
+      <aside class="sideCard" aria-label="Quick facts">
+        <p class="mini"><b>Our promise:</b> trust-first service with verified approvals and hassle-free registrations.</p>
+        <ul class="list">
+          <li>Only compliant projects (HMDA / DTCP / RERA)</li>
+          <li>Clear pricing & transparent documentation</li>
+          <li>Guidance on best properties for your goal (short/long term)</li>
+          <li>Fast support from enquiry to registration</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- About / Company Profile -->
+    <section id="about" class="section" aria-label="About NHC">
+      <h2>About Nature Home Constructions (NHC)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Who we are</h3>
+          <p>NHC is a trust-driven real estate firm focused on premium plotted developments—planned with strong compliance, practical connectivity, and long-term value growth for investors and end-users.</p>
+        </div>
+        <div class="card">
+          <h3>What we do best</h3>
+          <p>We guide clients to the right asset—whether it is a high-growth plot for quick appreciation or a secure long-term holding—backed by verified approvals and clean documentation.</p>
+        </div>
+        <div class="card">
+          <h3>Our values</h3>
+          <p><b>Trust</b> in every commitment · <b>Loyalty</b> in every relationship · <b>Transparency</b> in every document and process.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance / Trust section -->
+    <section id="compliance" class="section" aria-label="Compliance and trust">
+      <h2>Trust + Compliance (Hassle-free Registrations)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Approved by design</h3>
+          <p>We work only on projects with clear approvals (HMDA / DTCP / RERA) so your investment stays safe and future-ready.</p>
+        </div>
+        <div class="card">
+          <h3>Fast, clean documentation</h3>
+          <p>From enquiry to registration—our process is structured to reduce confusion, avoid delays, and keep every step clear for you.</p>
+        </div>
+        <div class="card">
+          <h3>Right property advice</h3>
+          <p>We advise the best option for your goal—short-term appreciation or long-term wealth—so your money works harder, not longer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project section -->
+    <section id="project" class="section" aria-label="NHC's SANTO project">
+      <h2>NHC’s SANTO – Shankarpally (New HMDA Zone)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project Snapshot</h3>
+          <p><b>Location:</b> Shankarpally (West Hyderabad growth belt)</p>
+          <p><b>Approvals:</b> DTCP (118/2024/H) · RERA (P02100008595)</p>
+          <p><b>Price:</b> Starts from ₹42 Lakhs</p>
+        </div>
+        <div class="card">
+          <h3>Why this project is strong</h3>
+          <p>Very close to IT SEZ and major commercial corridors; surrounded by planned 100+ ft road connectivity and future RR7/RRR/ORR access—ideal for appreciation and luxury villa building.</p>
+        </div>
+        <div class="card">
+          <h3>Investor edge</h3>
+          <p>Designed for both <b>short-term gains</b> and <b>long-term stability</b> with fast growth potential in a high-demand West Hyderabad micro-market.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery (replace images with your real project photos) -->
+    <section class="section" aria-label="Project gallery">
+      <h2>Project Gallery (Your site photos)</h2>
+      <div class="gallery">
+        <img src="santo1.jpg" alt="NHC SANTO – site view 1" />
+        <img src="santo2.jpg" alt="NHC SANTO – site view 2" />
+        <img src="santo3.jpg" alt="NHC SANTO – site view 3" />
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" aria-label="Contact">
+      <h2>Contact & Book a Site Visit</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Rajendar Reddy</h3>
+          <p><b>Company:</b> Nature Home Constructions (NHC)</p>
+          <p><b>WhatsApp:</b> +91 8886047520</p>
+          <p><b>Promise:</b> Trust, loyalty, and hassle-free registrations.</p>
+          <p style="margin-top:10px;">
+            <a class="btn btnPrimary" href="https://wa.me/918886047520" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Quick Start (Best for buyers)</h3>
+          <p>Send us your budget and investment goal (short/long term). We will recommend the best compliant option with clear documentation and fast processing.</p>
+        </div>
+        <div class="card">
+          <h3>What you get</h3>
+          <p>Verified approvals, transparent pricing, strong connectivity, and a smooth buying experience—so you buy with confidence.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footerWrap">
+      <div class="small">© 2025 Nature Home Constructions (NHC) — Build the Trust</div>
+      <div class="small">WhatsApp: +91 8886047520</div>
     </div>
-
-    <a class="btn" href="tel:+91XXXXXXXXXX">Call Now</a>
-</div>
-
-<!-- WhatsApp -->
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
-
+  </footer>
 </body>
-  </html>
+</html>
